@@ -132,7 +132,7 @@ export function Footer({}: Props) {
             <div className="w-full flex justify-center">
               <input
                 type="submit"
-                className="bg-maloneBeige py-2 px-5 rounded-md cursor-pointer text-white xl:hover:bg-beigeHover"
+                className="bg-maloneBeige py-2 px-5 rounded-md cursor-pointer text-white duration-300 xl:hover:bg-beigeHover"
               />
             </div>
           </form>

@@ -5,9 +5,7 @@ import Modal from "../components/Modal";
 import { TfiClose } from "react-icons/tfi";
 import { disableBodyScroll, enableBodyScroll } from "body-scroll-lock";
 
-type Props = {};
-
-export function Home({}: Props) {
+export function Home() {
   const [selectedImage, setSelectedImage] = useState<{
     name: string;
     description: string;
@@ -43,7 +41,7 @@ export function Home({}: Props) {
     <div className="selection:bg-beigeHover">
       {isModalOpen && (
         <Modal>
-          <div className="fixed w-full h-full flex align-middle justify-center bg-gray-300/90 z-50 max-sm:px-[10%] pt-10">
+          <div className="fixed w-full h-full top-0 flex align-middle justify-center bg-gray-300/90 z-50 max-sm:px-[10%] pt-20">
             <div className="bg-white overflow-hidden rounded-3xl p-4 w-[530px] h-[680px] md:h-[800px]  lg:h-[1100px] lg:w-[700px] xl:h-[680px] xl:w-[550px]">
               <div className="flex justify-end w-full pr-4 pt-3">
                 <button>
@@ -89,7 +87,7 @@ export function Home({}: Props) {
         </Modal>
       )}
       <header className="h-96 xl:h-[480px] w-full bg-cover bg-center bg-local bg-hero-pattern">
-        <div className="w-1/2 max-sm:h-4/5 h-full pl-5 pt-4 sm:pb-12 md:pt-8 md:pb-18 flex flex-col justify-around xl:text-center">
+        <div className="w-1/2 max-sm:h-4/5 h-full pl-5 pt-4 sm:pb-12 md:pt-8 md:pb-18 flex flex-col justify-around xl:text-left">
           <h3 className="text-white cursor-default static text-2xl font-normal tracking-wide md:text-3xl xl:text-5xl xl:leading-normal xl:px-4">
             Making new best friends since 1994
           </h3>
@@ -112,7 +110,7 @@ export function Home({}: Props) {
         <h2 className="text-3xl font-normal tracking-wide leading-9 text-center py-10 xl:py-5 xl:mt-6 md:font-semibold xl:text-4xl xl:leading-normal">
           Adopting is one of the best things you can do.
         </h2>
-        <div className="mb-14 text-normal font-extralight tracking-wide leading-7 text-center md:text-xl md:leading-9 xl:p-4 xl:font-light xl:leading-10 xl:hover:scale-110 duration-500 xl:hover:bg-gray-200 xl:hover:rounded-xl xl:hover:shadow-lg">
+        <div className="mb-14 text-normal font-extralight tracking-wide leading-7 text-center md:text-xl md:leading-9 xl:p-4 xl:font-light xl:leading-10 xl:hover:scale-105 duration-500 xl:hover:bg-gray-200 xl:hover:rounded-xl xl:hover:shadow-lg">
           When you adopt, you're not just giving a deserving dog a home. You're
           also reducing the demand for puppy mills and industrail-scale breeding
           operations that put profit before animal welfare.
@@ -139,7 +137,7 @@ export function Home({}: Props) {
                       key={image.id}
                       src={image.src}
                       alt={image.alt}
-                      className="rounded-3xl max-md:mt-6 lg:mt-8 xl:hover:scale-110 duration-300 xl:cursor-pointer xl:w-full"
+                      className="rounded-3xl max-md:mt-6 lg:mt-8 xl:hover:scale-105 duration-300 xl:cursor-pointer xl:w-full"
                       onClick={() => handleClick(image)}
                     />
                   </button>
@@ -160,7 +158,7 @@ export function Home({}: Props) {
             target="_blank"
           >
             {" "}
-            <button className="bg-white py-4 px-10 rounded-md tracking-wide font-light xl:hover:text-beigeHover xl:text-lg xl:tracking-wider">
+            <button className="bg-white py-4 px-10 rounded-md tracking-wide duration-300 font-light xl:hover:text-beigeHover xl:text-lg xl:tracking-wider">
               Inquire
             </button>
           </Link>
