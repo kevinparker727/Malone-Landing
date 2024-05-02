@@ -8,9 +8,7 @@ import Headroom from "react-headroom";
 
 // import Modal from "./Modal";
 
-type Props = {};
-
-export function Navbar({}: Props) {
+export function Navbar() {
   const [sideBar, setSideBar] = useState(false);
 
   const navLinks = [
@@ -62,7 +60,7 @@ export function Navbar({}: Props) {
             <div className="md:pr-6 xl:pl-8">
               <Link
                 to={"/"}
-                className="text-3xl tracking-wide xl:hover:text-maloneBeige md:font-semibold md:text-4xl"
+                className="text-3xl tracking-wide xl:hover:text-maloneBeige duration-300 md:font-semibold md:text-4xl"
               >
                 Malone
               </Link>
@@ -75,14 +73,14 @@ export function Navbar({}: Props) {
                 <Link
                   to={data.path}
                   key={index}
-                  className="md:font-light md:text-lg md:hover:text-maloneBeige tracking-wide"
+                  className="md:font-light md:text-lg md:hover:text-maloneBeige duration-300 tracking-wide"
                 >
                   {data.title}
                 </Link>
               ))}
               <div>
                 <Link to={"/donate"}>
-                  <button className=" bg-maloneBeige hover:bg-beigeHover rounded-md w-36 h-16 font-poppins text-sm text-white font-medium md:text-md">
+                  <button className=" bg-maloneBeige hover:bg-beigeHover duration-300 rounded-md w-36 h-16 font-poppins text-sm text-white font-medium md:text-md">
                     Donate Now
                   </button>
                 </Link>
