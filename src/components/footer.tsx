@@ -42,7 +42,7 @@ export function Footer({}: Props) {
 
   return (
     <div className="w-full flex flex-wrap">
-      <div className="w-full flex flex-wrap max-lg:h-80 border-b border-slate-400 xl:h-[500px]">
+      <div className="w-full flex flex-wrap max-lg:h-80 border-b border-slate-400 xl:h-[500px] bg-gradient-to-br from-stone-300 to-stone-50 from-5%">
         <APIProvider apiKey="AIzaSyDiFTRIuPozKsL6b7hrWvqNSnJjbl0FIV8">
           <div className="w-full h-80 p-10 flex justify-center xl:h-[500px] xl:w-1/2">
             <Map
@@ -132,21 +132,21 @@ export function Footer({}: Props) {
             <div className="w-full flex justify-center">
               <input
                 type="submit"
-                className="bg-maloneBeige py-2 px-5 rounded-md cursor-pointer text-white xl:hover:bg-beigeHover"
+                className="bg-maloneBeige py-2 px-5 rounded-md cursor-pointer text-white duration-300 xl:hover:bg-beigeHover"
               />
             </div>
           </form>
         </div>
       </div>
 
-      <div className="w-full h-40 xl:h-72 flex">
+      <div className="w-full h-40 xl:h-72 flex bg-gradient-to-bl from-stone-50 to-stone-300 from-5%">
         <section className="w-1/2 h-full xl:h-3/4 px-10 flex flex-wrap md:px-[15%] content-center justify-center text-center tracking-wide">
           <div className="font-semibold cursor-default py-2 md:py-0 md:pb-4 text-xl md:text-3xl xl:text-4xl">
             Malone
           </div>
           <div className="text-sm md:text-lg cursor-default py-2 font-light">
             {" "}
-            Made with Love by{" "}
+            Made with Love by <br />
             <Link
               to={"https://www.linkedin.com/in/kevin-parker-35ab4b148/"}
               target="_blank"

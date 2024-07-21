@@ -8,9 +8,7 @@ import Headroom from "react-headroom";
 
 // import Modal from "./Modal";
 
-type Props = {};
-
-export function Navbar({}: Props) {
+export function Navbar() {
   const [sideBar, setSideBar] = useState(false);
 
   const navLinks = [
@@ -49,7 +47,7 @@ export function Navbar({}: Props) {
             className={
               sideBar
                 ? "hidden"
-                : "max-xl:h-16 px-5 lg:px-10 bg-white max-xl:w-full w-1/2 md:h-24 flex items-center justify-between"
+                : "max-xl:h-16 px-5 lg:px-10 bg-gradient-to-r from-stone-300 to-stone-200 from-5% max-xl:w-full w-1/2 md:h-24 flex items-center justify-between"
             }
           >
             {/* menu */}
@@ -62,7 +60,7 @@ export function Navbar({}: Props) {
             <div className="md:pr-6 xl:pl-8">
               <Link
                 to={"/"}
-                className="text-3xl tracking-wide xl:hover:text-maloneBeige md:font-semibold md:text-4xl"
+                className="text-stone-800 text-3xl tracking-wide xl:hover:text-maloneBeige duration-300 md:font-semibold md:text-4xl"
               >
                 Malone
               </Link>
@@ -70,19 +68,19 @@ export function Navbar({}: Props) {
           </section>
 
           <section className="hidden xl:block w-1/2">
-            <div className="flex justify-between items-center h-24 bg-white pr-8">
+            <div className="flex justify-between items-center h-24 bg-gradient-to-l from-stone-300 to-stone-200 from-5% pr-8">
               {navLinks.map((data, index) => (
                 <Link
                   to={data.path}
                   key={index}
-                  className="md:font-light md:text-lg md:hover:text-maloneBeige tracking-wide"
+                  className="md:font-light md:text-lg md:hover:text-maloneBeige duration-300 tracking-wide"
                 >
                   {data.title}
                 </Link>
               ))}
               <div>
                 <Link to={"/donate"}>
-                  <button className=" bg-maloneBeige hover:bg-beigeHover rounded-md w-36 h-16 font-poppins text-sm text-white font-medium md:text-md">
+                  <button className=" bg-maloneBeige hover:bg-beigeHover duration-300 rounded-md w-36 h-16 font-poppins text-sm text-white font-medium md:text-md">
                     Donate Now
                   </button>
                 </Link>
@@ -100,7 +98,7 @@ export function Navbar({}: Props) {
           sideBar && "translate-x-0"
         )}
       >
-        <section className="text-black bg-white flex-col absolute left-0 top-0 h-screen w-56 py-8 px-6 gap-10 flex z-50">
+        <section className="text-stone-800 bg-white flex-col absolute left-0 top-0 h-screen w-56 py-8 px-6 gap-10 flex z-50">
           <div className="flex">
             <div className="flex justify-end w-full">
               <TfiClose
@@ -133,7 +131,7 @@ export function Navbar({}: Props) {
 
           <div className="flex justify-center">
             <Link to={"/donate"}>
-              <button className="xl:hidden bg-maloneBeige rounded-md w-32 md:max-lg:w-40 h-12 md:max-lg:h-14 font-poppins text-sm md:max-lg:text-lg text-white my-5 tracking-wide font-medium">
+              <button className="xl:hidden bg-maloneBeige rounded-md w-32 md:max-lg:w-40 h-12 md:max-lg:h-14 font-poppins text-sm md:max-lg:text-lg text-white  my-5 tracking-wide font-medium">
                 Donate Now
               </button>
             </Link>

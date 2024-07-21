@@ -1,4 +1,8 @@
-import Pedro from "../assets/img/pedro.jpeg";
+import Pedro1 from "../assets/img/pedro.jpeg";
+import Pedro2 from "../assets/img/pedro2.jpeg";
+import Pedro3 from "../assets/img/pedro3.jpeg";
+import Pedro4 from "../assets/img/pedro4.jpeg";
+import Pedro5 from "../assets/img/pedro5.jpeg";
 import Jasmine from "../assets/img/jasmine.jpeg";
 import Michael from "../assets/img/michael.jpeg";
 import Philippe from "../assets/img/philippe.jpeg";
@@ -10,7 +14,14 @@ export const thePups = [
     name: "Pedro",
     description:
       "Calm and wise, Pedro is the perfect companion for an older individual looking for a less active experience. He responds well to commands and has a gorgeous, lustrous coat.",
-    src: Pedro,
+    src: Pedro1,
+    imgs: [
+      { src: Pedro1 },
+      { src: Pedro2 },
+      { src: Pedro3 },
+      { src: Pedro4 },
+      { src: Pedro5 },
+    ],
     alt: "Pedro",
     id: 1,
   },

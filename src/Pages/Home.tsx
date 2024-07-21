@@ -4,10 +4,9 @@ import { thePups } from "../assets/pupsData";
 import Modal from "../components/Modal";
 import { TfiClose } from "react-icons/tfi";
 import { disableBodyScroll, enableBodyScroll } from "body-scroll-lock";
+// import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
-type Props = {};
-
-export function Home({}: Props) {
+export function Home() {
   const [selectedImage, setSelectedImage] = useState<{
     name: string;
     description: string;
@@ -43,8 +42,8 @@ export function Home({}: Props) {
     <div className="selection:bg-beigeHover">
       {isModalOpen && (
         <Modal>
-          <div className="fixed w-full h-full flex align-middle justify-center bg-gray-300/90 z-50 max-sm:px-[10%] pt-10">
-            <div className="bg-white overflow-hidden rounded-3xl p-4 w-[530px] h-[680px] md:h-[800px]  lg:h-[1100px] lg:w-[700px] xl:h-[680px] xl:w-[550px]">
+          <div className="fixed w-full h-full top-0 flex align-middle justify-center bg-zinc-300/90 z-50 max-sm:px-[10%] pt-20 lg:pt-32 xl:pt-10">
+            <div className="bg-gradient-to-br from-stone-400 to-stone-200 from-5% shadow-xl overflow-hidden rounded-3xl p-4 w-[530px] h-[680px] md:h-[800px]  lg:h-[1100px] lg:w-[700px] xl:h-[680px] xl:w-[550px]">
               <div className="flex justify-end w-full pr-4 pt-3">
                 <button>
                   <TfiClose
@@ -56,7 +55,7 @@ export function Home({}: Props) {
               <section className="w-full pb-5 xl:pb-4 flex justify-center">
                 <div className="w-3/4 xl:w-[90%]">
                   <div className="w-full pb-3 flex justify-center">
-                    <p className="text-2xl md:text-4xl md:pb-2 md:font-semibold md:pt-3 lg:pt-2 lg:text-4xl xl:text-3xl">
+                    <p className="text-2xl md:text-4xl md:pb-2 md:font-semibold text-stone-800 md:pt-3 lg:pt-2 lg:text-4xl xl:text-3xl">
                       {selectedImage.name}
                     </p>
                   </div>
@@ -89,7 +88,7 @@ export function Home({}: Props) {
         </Modal>
       )}
       <header className="h-96 xl:h-[480px] w-full bg-cover bg-center bg-local bg-hero-pattern">
-        <div className="w-1/2 max-sm:h-4/5 h-full pl-5 pt-4 sm:pb-12 md:pt-8 md:pb-18 flex flex-col justify-around xl:text-center">
+        <div className="w-1/2 max-sm:h-4/5 h-full pl-5 pt-4 sm:pb-12 md:pt-8 md:pb-18 flex flex-col justify-around xl:text-left">
           <h3 className="text-white cursor-default static text-2xl font-normal tracking-wide md:text-3xl xl:text-5xl xl:leading-normal xl:px-4">
             Making new best friends since 1994
           </h3>
@@ -108,11 +107,11 @@ export function Home({}: Props) {
           </div>
         </div>
       </header>
-      <section className="px-20 md:px-36 xl:px-96 xl:h-[480px] xl:flex xl:flex-col xl:justify-center">
+      <section className="px-20 md:px-36 xl:px-96 xl:h-[480px] xl:flex xl:flex-col xl:justify-center bg-gradient-to-br from-stone-300 to-white from-0%">
         <h2 className="text-3xl font-normal tracking-wide leading-9 text-center py-10 xl:py-5 xl:mt-6 md:font-semibold xl:text-4xl xl:leading-normal">
           Adopting is one of the best things you can do.
         </h2>
-        <div className="mb-14 text-normal font-extralight tracking-wide leading-7 text-center md:text-xl md:leading-9 xl:p-4 xl:font-light xl:leading-10 xl:hover:scale-110 duration-500 xl:hover:bg-gray-200 xl:hover:rounded-xl xl:hover:shadow-lg">
+        <div className="mb-14 text-normal font-extralight tracking-wide leading-7 text-center md:text-xl md:leading-9 xl:p-4 xl:font-light xl:leading-10 xl:hover:scale-105 duration-500 xl:hover:bg-stone-300 xl:rounded-xl opacity-60 hover:opacity-100 xl:shadow-2xl">
           When you adopt, you're not just giving a deserving dog a home. You're
           also reducing the demand for puppy mills and industrail-scale breeding
           operations that put profit before animal welfare.
@@ -139,7 +138,7 @@ export function Home({}: Props) {
                       key={image.id}
                       src={image.src}
                       alt={image.alt}
-                      className="rounded-3xl max-md:mt-6 lg:mt-8 xl:hover:scale-110 duration-300 xl:cursor-pointer xl:w-full"
+                      className="rounded-3xl max-md:mt-6 lg:mt-8 xl:hover:scale-105 duration-300 xl:cursor-pointer xl:w-full"
                       onClick={() => handleClick(image)}
                     />
                   </button>
@@ -160,7 +159,7 @@ export function Home({}: Props) {
             target="_blank"
           >
             {" "}
-            <button className="bg-white py-4 px-10 rounded-md tracking-wide font-light xl:hover:text-beigeHover xl:text-lg xl:tracking-wider">
+            <button className="bg-white py-4 px-10 rounded-md tracking-wide font-light xl:hover:text-beigeHover duration-300 xl:text-lg xl:tracking-wider">
               Inquire
             </button>
           </Link>
