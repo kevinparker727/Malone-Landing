@@ -1,16 +1,15 @@
-import { Link } from "react-router-dom";
+import React from "react";
 
-const Modal = ({ children }) => {
-  // const [isModalOpen, setIsModalOpen] = useState(false);
+interface ModalProps {
+  children: React.ReactNode;
+}
 
+const Modal: React.FC<ModalProps> = ({ children }) => {
   return (
     <div>
       <div>
         <section>
-          <div>{children.name}</div>
-          <div>{children.image}</div>
-          <div>{children}</div>
-
+          {children}
           <div>
             <button>Inquire</button>
           </div>

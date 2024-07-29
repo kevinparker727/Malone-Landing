@@ -4,7 +4,6 @@ import { thePups } from "../assets/pupsData";
 import Modal from "../components/Modal";
 import { TfiClose } from "react-icons/tfi";
 import { disableBodyScroll, enableBodyScroll } from "body-scroll-lock";
-// import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
 export function Home() {
   const [selectedImage, setSelectedImage] = useState<{
